@@ -1,67 +1,26 @@
+/* Write an averaging program that prompts the user to enter a positive integer that specifies the number of values to average.
+* Then output the array index with its value then display the average.
+
+*/
+
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-	int x = 0; //East to West
-	int y = 0; // North to South
+	double x = 1;
+	double average_array[1] = { x };
 
-	int current_position[2] = { x,y };
-	char direction_travel = 'Z';
+	cout << " How many numbers do you want to average? ";
+	cin >> x;
 
-	while (direction_travel != 'Q')
+	for (int a; a < x; ++a)
 	{
-		cout << "Current Position = (" << current_position[x] << ',' << current_position[y] << ')' << endl;
-		cout << "Move (N)orth, (E)ast, (W)est, (S)outh, (Q)uit?" << endl;
+	cout << average_array;
 
-		cin >> direction_travel;
-
-		switch (direction_travel)
-		{
-		case 'N':
-			current_position[y] = ++y;
-			break;
-
-		case 'n':
-			current_position[y] = ++y;
-			break;
-
-		case 'S':
-			current_position[y] = --y;
-			break;
-
-		case 's':
-			current_position[y] = --y;
-			break;
-
-		case 'E':
-			current_position[x] = --y;
-			break;
-
-		case 'e':
-			current_position[x] = --y;
-			break;
-
-		case 'W':
-			current_position[x] = ++y;
-			break;
-
-		case 'w':
-			current_position[x] = ++y;
-			break;
-
-
-		case 'Q':
-			cout << "Exiting Program..." << endl;
-			break;
-
-		case 'q':
-			cout << "Exiting Program..." << endl;
-			break;
-
-		default:
-			cout << "Invalid entry." << endl;
-		}
 	}
+
+
+
 }
