@@ -4,41 +4,41 @@ using namespace std;
 
 int main()
 {
-	int x = 0;  // East to West movement
-	int y = 0;	// North to South movement
-	//int current_position[2] = { 0,0 }; // Stores the current position
-	char movement = 'Z';
+	int x = 0;  // east to west movement
+	int y = 0;	// north to south movement
+	//int current_position[2] = { 0,0 }; // stores the current position
+	char movement = 'z';
 
-	while (movement != 'Q')
+	while (movement != 'q')
 	{
-	cout << " Current Position = (" << x << ',' << y << ')' << endl;
-	cout << " Move (N)orth, (E)ast, (W)est, (S)outh, (Q)uit? " << endl;
+	cout << " current position = (" << x << ',' << y << ')' << endl;
+	cout << " move (n)orth, (e)ast, (w)est, (s)outh, (q)uit? " << endl;
 	cin >> movement;
 
 	switch (movement)
 	{
-	case 'N':
+	case 'n':
 		++y;//current_position[1]++;
 		break;
 
-	case 'S':
+	case 's':
 		--y;
 		break;
 
-	case 'E':
+	case 'e':
 		--x;
 		break;
 
-	case 'W':
+	case 'w':
 		++x;
 		break;
 
-	case 'Q':
-		cout <<"Exiting..." << endl;
+	case 'q':
+		cout <<"exiting..." << endl;
 		break;
 		
 	default:
-		cout << " Invalid entry " << endl;
+		cout << " invalid entry " << endl;
 
 		}
 
