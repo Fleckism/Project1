@@ -7,19 +7,34 @@
 
 using namespace std;
 
+int sum_Array(int values[], int size)
+
+{
+	int sum = 0;
+
+	// this array stops when i== size because the last element is size -1
+
+	for (int i = 0; i < size; i++)
+	{
+		sum += values[i];
+	}
+
+	return sum;
+}
+
 int main()
 {
-	double x = 1;
-	double average_array[1] = { x };
+	int values[10];
 
-	cout << " How many numbers do you want to average? ";
-	cin >> x;
+	for (int i = 0; i < 10; i++)
 
-	for (int a; a < x; ++a)
 	{
-	cout << average_array;
+		cout << "Enter value " << i << ':' << endl;
 
+		cin >> values[i];
 	}
+
+	cout << sum_Array(values, 10) << endl;
 
 
 
