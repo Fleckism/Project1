@@ -7,35 +7,11 @@
 
 using namespace std;
 
-int sum_Array(int values[], int size)
-
-{
-	int sum = 0;
-
-	// this array stops when i== size because the last element is size -1
-
-	for (int i = 0; i < size; i++)
-	{
-		sum += values[i];
-	}
-
-	return sum;
-}
-
 int main()
 {
-	int values[10];
-
-	for (int i = 0; i < 10; i++)
-
-	{
-		cout << "Enter value " << i << ':' << endl;
-
-		cin >> values[i];
-	}
-
-	cout << sum_Array(values, 10) << endl;
-
-
-
+	int size = 0;
+	cout << "Enter desired size of the array.";
+	cin >> size;
+	int* array = new int[size]; // all code above works.
+	
 }
