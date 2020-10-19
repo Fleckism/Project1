@@ -5,41 +5,32 @@ Write an averaging program that prompts the user to enter a positive integer tha
 */
 
 #include <iostream>
-
 using namespace std;
 
 int main()
 {
-	int array_size =0;
-	float my_array[100], sum = 0.0, average;
-	
-	cout << "Enter desired size of the array." << endl;
-	cin >> array_size;
+    int n_my_Array_size, i;
+    float num_my_Array[100], sum = 0.0, average;
 
-	//while (array_size > 25 || array_size <= 25)  // ERROR HANDLING
-	//{
-	//	cout << "Error!  Number should be in range of (1 to 25)." << endl;
-	//	cout << "Enter a number withing scope: " << endl;
-	//	cin >> array_size;
-	//}
+    cout << "Enter the numbers of data: ";
+    cin >> n_my_Array_size;
 
-	for ( int i =0 ; i < array_size; ++i)
-	{
-		cout << array_size + 1 << ". Enter number: ";
-		cin >> my_array[i];
-		sum += my_array[i];
-	}
+    while (n_my_Array_size > 100 || n_my_Array_size <= 0)
+    {
+        cout << "Error! number should in range of (1 to 100)." << endl;
+        cout << "Enter the number again: ";
+        cin >> n_my_Array_size;
+    }
 
-	average = sum / array_size;
-	cout << "Average = " << average;
-	
-	
+    for (i = 0; i < n_my_Array_size; ++i)
+    {
+        cout << i + 1 << ". Enter number: ";
+        cin >> num_my_Array[i];
+        sum += num_my_Array[i];
+    }
 
+    average = sum / n_my_Array_size;
+    cout << "Average = " << average;
 
-	
-
-
-
-
-	return 0;
+    return 0;
 }
