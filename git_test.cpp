@@ -6,7 +6,7 @@ Write an averaging program that prompts the user to enter a positive integer tha
 
 #include <iostream>
 using namespace std;
-// This one works
+// This one works  why do these comments not show up
 int main()
 {
     int n_my_Array_size, i;
