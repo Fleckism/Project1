@@ -14,13 +14,21 @@ int main()
     cout << " Enter a positive integer to compute the factorial of :";
     cin >> fact_in;
 
-    for (int i=0; fact_in <= i; ++i )
+    while (fact_in > 25 || fact_in <= 0) // Error Handling
+    {
+        cout << " Error! number should be in a  range of  1 to 25. " << endl;
+        cout << " Enter number within said range." << endl;
+        cin >> fact_in;
+    }
+
+
+    for (int i=0; fact_in > i; ++i )
         {
         cout << "Evaluate " << fact_in << "!." << endl;
-        cout << fact_in << "!" << " + " << endl;
+        cout << i << "!" << " = " << i << '(' << --i << ')' << '=' << product << '.' <<  endl;
 
-        cin >> factor_array[i]
-        factor_array [i]= fact_in 
+       // cin >> factor_array[i];
+         //   product = factor_array[i] * factor_array[--i];
         }
 
 
