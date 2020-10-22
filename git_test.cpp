@@ -8,7 +8,11 @@ using namespace std;
 
 int main()
 {
-   
+    int fact_in = 0;
+    int factorial = 1;
+
+    cout << "Input a number between 0 and 25: " << endl;
+    cin >> fact_in;
 
     while (fact_in > 25 || fact_in <= 0) // Error Handling
     {
@@ -17,12 +21,15 @@ int main()
         
     }
 
-   
+    for (int i = 1; i <= fact_in; ++i)
+    {
+        factorial *= i;
+   }
 
 
+    cout << fact_in << "! = " << factorial << endl;
 
 
-
-    cout << endl << "****************************************************************************************************************************************" << endl;
+    cout << endl << "***********************************************************************************************************************************" << endl;
     return 0;
 }
