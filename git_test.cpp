@@ -1,35 +1,46 @@
-/* 2.7.4 Factorial
-The factorial of a positive integer n
+/* 2.7.5 Matrix Addition pg 64
+The sum of two matrices (two dimensional array?)  matrices A & B will be added and stored in C
 
 */
 
 #include <iostream>
+
 using namespace std;
 
 int main()
 {
-    int fact_in = 0;
-    int factorial = 1;
+    int row = 2, column = 3, sum[2][3], i, j; // i and j are initialized here instead of every loop
+    int a[2][3] = { {0,1,2} , {3,4,5} };
+    int b[2][3] = { {6,7,8} , {9,10,11} };
 
-    cout << "Input a number between 0 and 25: " << endl;
-    cin >> fact_in;
+    cout << "A = " << endl;
 
-    while (fact_in > 25 || fact_in <= 0) // Error Handling
-    {
-        cout << " Error! number should be in a  range of  1 to 25. " << endl;
-        cout << " Enter number within said range." << endl;
-        
+    for (i = 0; i < row; ++i) {
+        for (j = 0; j < column; ++j)
+            cout << a[i][j] << "  "; // messed with [i][j]
+        cout << endl;
+    }
+    cout << endl;
+
+    cout << "B = " << endl;
+    for (i = 0; i < row; ++i) {
+        for (j = 0; j < column; ++j)
+            cout << b[i][j] << "  ";
+        cout << endl;
+    }
+    cout << endl;
+
+
+    for (i = 0; i < row; ++i)
+        for (j = 0; j < column; ++j)
+            sum[i][j] = a[i][j] + b[i][j];
+
+    cout << "A + B = " << endl;
+    for (i = 0; i < row; ++i) {
+        for (j = 0; j < column; ++j)
+            cout << sum[i][j] << " ";
+        cout << endl;
     }
 
-    for (int i = 1; i <= fact_in; ++i)
-    {
-        factorial *= i;
-   }
 
-
-    cout << fact_in << "! = " << factorial << endl;
-
-
-    cout << endl << "***********************************************************************************************************************************" << endl;
     return 0;
-}
