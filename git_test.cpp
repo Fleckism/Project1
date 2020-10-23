@@ -1,6 +1,5 @@
-/* 2.7.6 ASCII pg 65
-Write a program that outputs every character between [33,255]
-  ascii #: ascii symbol
+/* 2.7.7 Linear Search pg 66
+
 */
 
 #include <iostream>
@@ -9,19 +8,35 @@ using namespace std;
 
 int main()
 {
-   int i,j;
+    int my_array[] = { 7,3,32,2,55,34,6,13,29,22,11,9,1,5,42,39,8 };
+    int my_value = 0;
+    int current_position = 0;
 
+    cout << " List = ";
 
-   for (i = 33; i < 255; i++)
-   {
-           cout << i << ':' << (char)i << ' ';
-          // if (i % 105) no idea how to break the cout! bedtime
+    for (int i = 0; i < 17; i++)
+    {
+        cout << my_array[i] << ',';
+    }
 
-            //   cout << endl;
-       
+    cout << endl << " Enter an interger in the list to search for : " << endl;
+    cin >> my_value; // 55 should = 4
+    
 
-   }
+    for (int j = 0; j < 17; j++)
+    {
+        if (my_array[j] == my_value)
+        {
+            current_position = j;
+            break;
+        }
+        
 
+            
+    }
+
+    cout << " Item found at index [" << current_position << "]" << endl;
+        
 
 
     return 0;
